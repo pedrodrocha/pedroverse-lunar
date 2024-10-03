@@ -7,7 +7,7 @@ from lunarcore.core.typings.datatypes import DataType
 
 class Multiplier(
     BaseComponent,
-    component_name="Number Input",
+    component_name="Multiplier",
     component_description="""Allows the input of number that can then be used in other downstream components. It can also be used as an output if useful.
 Inputs:
   `multiplicand` (float): The multiplicand number.
