@@ -5,7 +5,7 @@ from lunarcore.core.typings.components import ComponentGroup
 from lunarcore.core.typings.datatypes import DataType
 from lunarcore.core.data_models import ComponentInput, ComponentModel
 from typing import Any, Optional
-from service import WeatherServiceFactory
+from .service import WeatherServiceFactory
 
 
 class CityWeather(
