@@ -1,14 +1,11 @@
-from typing import Any
-
 from lunarcore.core.component import BaseComponent
-from lunarcore.core.data_models import ComponentInput
 from lunarcore.core.typings.components import ComponentGroup
 from lunarcore.core.typings.datatypes import DataType
 
 class Multiplier(
     BaseComponent,
     component_name="Multiplier",
-    component_description="""Allows the input of number that can then be used in other downstream components. It can also be used as an output if useful.
+    component_description="""Allows the multiplication of two numbers.
 Inputs:
   `multiplicand` (float): The multiplicand number.
     `multiplier` (float): The multiplier number.
