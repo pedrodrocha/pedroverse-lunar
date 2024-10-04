@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pedroverse"
+version = "0.1.0"
+description = ""
+authors = ["Pedro"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+lunarcore = {path = "../lunar/lunarcore"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
