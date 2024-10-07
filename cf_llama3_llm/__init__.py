@@ -8,7 +8,7 @@ SYSTEM_PROMPT = "You are a helpful AI assistant. Your name is AI Rover."
 
 class CfLlama3Prompt(
     BaseComponent,
-        component_name="Azure Open AI prompt",
+        component_name="Cloudflare Workers AI Llama 3 prompt",
         component_description="""Connects to Cloudflare, runs an inputted natural language prompt (str), and output the result as text (str).
     Inputs:
         `user_prompt` (str): The user prompt to provide the LLM with. If needed, the prompt can be inputted manually by the user.
