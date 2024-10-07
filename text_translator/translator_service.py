@@ -11,7 +11,7 @@ class CloudflareM2MTranslatorService:
         self._account_id = account_id
         self.http = urllib3.PoolManager()
 
-    def run(self, text: str, source_language: str, target_language: str) -> dict:
+    def run(self, text: str, source_language: str, target_language: str) -> str:
         url = f"{self.BASE_URL}{self._account_id}/ai/run/{self.MODEL}"
 
         headers = {
@@ -26,7 +26,12 @@ class CloudflareM2MTranslatorService:
 
         response = self.http.request('POST', url, headers=headers, body=body)
 
-        return json.dumps(json.loads(response.data.decode('utf-8')))
+        data = json.loads(response.data.decode('utf-8'))
+
+        if data.success is False:
+            raise Exception(data.errors)
+
+        return data.result.translated_text
     
 class TranslatorServiceFactory:
     @staticmethod
