@@ -28,10 +28,10 @@ class CloudflareM2MTranslatorService:
 
         data = json.loads(response.data.decode('utf-8'))
 
-        if data.success is False:
-            raise Exception(data.errors)
+        if data['success'] is False:
+            return f"Error: {data['errors'][0]['message']}"
 
-        return data.result.translated_text
+        return data['result']['translated_text']
     
 class TranslatorServiceFactory:
     @staticmethod
