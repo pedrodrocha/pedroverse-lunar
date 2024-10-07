@@ -4,7 +4,7 @@ import json
 
 class CloudflareM2MTranslatorService:
     BASE_URL = "https://api.cloudflare.com/client/v4/accounts/"
-    MODEL = "@cf/meta/llama-3.1-8b-instruct"
+    MODEL = "@cf/meta/m2m100-1.2b"
 
     def __init__(self: "CloudflareM2MTranslatorService", api_key: str, account_id: str) -> None:
         self._api_key = api_key
