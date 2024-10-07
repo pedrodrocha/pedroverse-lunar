@@ -10,8 +10,8 @@ class CloudflareAIService:
         self._account_id = account_id
         self.http = urllib3.PoolManager()
 
-    def run(self, system_prompt: str, user_prompt: str) -> dict:
-        url = f"{self.BASE_URL}{self._account_id}/ai/run/{self.MODEL}"
+    def run(self, system_prompt: str, user_prompt: str, model: str = MODEL) -> dict:
+        url = f"{self.BASE_URL}{self._account_id}/ai/run/{model}"
 
         headers = {
             "Authorization": f"Bearer {self._api_key}",
