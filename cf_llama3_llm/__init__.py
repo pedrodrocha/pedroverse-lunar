@@ -16,6 +16,7 @@ class CfLlama3Prompt(
     Output (str): The answer provided by the LLM to the prompt.""",
         input_types={"system_prompt": DataType.TEMPLATE, "user_prompt": DataType.TEMPLATE},
         output_type=DataType.TEXT,
+        component_group=ComponentGroup.GENAI,
         cf_api_key="$LUNARENV::CF_API_KEY",
     ):
     def __init__(self, model: Optional[ComponentModel] = None, **kwargs: Any):
